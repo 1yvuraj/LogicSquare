@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joy's Café Search UI</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  #searchBox {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    color: black;
+    background-color: white;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 15px;
+    color: black;
+  }
+
+  th {
+    background-color: #1abc9c;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  /* 3D Hover Effect for Headers (th elements) */
+  th:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .no-location {
+    color: #999;
+    font-style: italic;
+  }
+
+  /* Style for odd rows */
+  tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
+  /* Style for even rows */
+  tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+
+</style>
+</head>
+<body>
+<div id="app">
+  <input type="text" id="searchBox" placeholder="Search by café name">
+  <table id="cafeTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Street</th>
+        <th>Locality</th>
+        <th>Postal Code</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+  const searchBox = document.getElementById('searchBox');
+  const cafeTable = document.getElementById('cafeTable').getElementsByTagName('tbody')[0];
+
+  async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      return null;
+    }
+  }
+
+  async function displayCafes() {
+    try {
+      const cafesObject = await fetchData('https://raw.githubusercontent.com/debojyoti/places-fake-rest-api/master/cafes.json');
+      const placesObject = await fetchData('https://raw.githubusercontent.com/debojyoti/places-fake-rest-api/master/places.json');
+      
+      cafesObject.cafes.forEach(function(val) {
+        let pObject = placesObject.places.find(place => place.id === val.location_id);
+        const row = document.createElement('tr');
+        if (pObject) {
+            row.innerHTML = `
+                <td>${val.name}</td>
+                <td>${pObject.street_no}</td>
+                <td>${pObject.locality}</td>
+                <td>${pObject.postal_code}</td>
+                <td>${pObject.lat}</td>
+                <td>${pObject.long}</td>
+            `;
+        } else {
+            row.innerHTML = `
+                <td>${val.name}</td>
+                <td colspan="5">No location found</td>
+            `;
+        }
+        cafeTable.appendChild(row);
+      });
+    } catch (error) {
+      console.error('Error displaying cafes:', error);
+    }
+  }
+
+  function filterCafes(searchTerm) {
+    const rows = cafeTable.getElementsByTagName('tr');
+    for (let i = 0; i < rows.length; i++) {
+      const name = rows[i].getElementsByTagName('td')[0].innerText.toLowerCase();
+      rows[i].style.display = name.includes(searchTerm.toLowerCase()) ? '' : 'none';
+    }
+  }
+
+  searchBox.addEventListener('input', function() {
+    filterCafes(this.value);
+  });
+
+  displayCafes();
+});
+</script>
+</body>
+</html>
