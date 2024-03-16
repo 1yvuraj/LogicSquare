@@ -2,14 +2,17 @@ Question 1
 <img width="1440" alt="Screenshot 2024-03-16 at 6 13 22 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/f2f1ed43-7b6a-4a8f-8b8b-71ef866af26b">
 
 Question 2
+
 <img width="1440" alt="Screenshot 2024-03-16 at 6 30 12 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/26c5ef9b-dc5b-4215-b077-474067757c81">
 
 Question 3
+
 <img width="1440" alt="Screenshot 2024-03-16 at 6 31 05 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/bec6cec5-1712-4ac5-a746-2555fb55c965">
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 31 39 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/e399584b-4b8f-464f-ad2a-8c99b37e41b6">
 
 Question 4
+
 <img width="1440" alt="Screenshot 2024-03-16 at 6 32 49 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/29b3903f-ff77-4077-a0cd-37838992d07b">
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 33 02 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/9bf2553c-6961-4ae5-aa50-6e74f82cff83">
