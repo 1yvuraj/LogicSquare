@@ -50,5 +50,5 @@ After Delete
 
 The project seems to involve data organization and management, with data being saved in local storage to ensure that it remains intact even after a page refresh.
 
-<---------------------------THE END AND THANKYOU 😊 ------------------------------------>
+<------------------------------------THE END AND THANKYOU 😊 ------------------------------------>
 
