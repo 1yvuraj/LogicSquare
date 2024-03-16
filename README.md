@@ -13,6 +13,8 @@ Question 3
 
 Question 4
 
+Deployment Link=https://resource-management-system.netlify.app/
+
 <img width="1440" alt="Screenshot 2024-03-16 at 6 32 49 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/29b3903f-ff77-4077-a0cd-37838992d07b">
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 33 02 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/9bf2553c-6961-4ae5-aa50-6e74f82cff83">
