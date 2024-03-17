@@ -56,6 +56,7 @@ After Delete
 <img width="1440" alt="Screenshot 2024-03-16 at 6 34 56 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/ffac97e3-2f91-490f-9c2d-1caa52311c9e">
 
 The project seems to involve data organization and management, with data being saved in local storage to ensure that it remains intact even after a page refresh.
+                                                                       THANKYOU 😊
 
-                                                       THE END AND THANKYOU 😊
+                              
 
