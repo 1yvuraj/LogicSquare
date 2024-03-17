@@ -31,11 +31,18 @@ Question 4
 
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 32 49 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/29b3903f-ff77-4077-a0cd-37838992d07b">
+<br>
+<br>
+YOU TOGGLE THE BUTTON OF AVAILABLE
+<br>
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 33 02 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/9bf2553c-6961-4ae5-aa50-6e74f82cff83">
 
 <img width="1440" alt="Screenshot 2024-03-16 at 6 33 15 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/282832f6-f9a2-4816-8a2b-7ffb6ec13886">
-
+<br>
+<br>
+YOU CAN ALSO MAKE AVAILABLE OR UNAVAILABLE TOGGLE IN BELOW CARD AND AFTER TOGGLE THE BUTTON AVAILABLE COUNT WILL INCREASE OR DECREASE 
+<br>
 <img width="1440" alt="Screenshot 2024-03-16 at 6 34 07 PM" src="https://github.com/1yvuraj/LogicSquare/assets/87929724/e191f32b-1ca8-4670-95b4-f41803553be7">
 
 Edit Function below
